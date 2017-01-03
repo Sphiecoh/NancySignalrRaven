@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+ <table border="1">
+            <thead>
+                <tr>
+                    <td><b>Time</b></td>
+                    <td><b>Message</b></td>
+                </tr>
+            </thead>
+            @Each.Logs
+            
+                <tr>
+                    <td>@Current.Created</td>
+                    <td>@Current.Message</td>
+                </tr>
+             @EndEach
+        </table>
+</body>
+</html>
