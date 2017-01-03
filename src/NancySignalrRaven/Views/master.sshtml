@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
+</head>
+<body>
+<div>
+<div class="ui left demo vertical labeled icon menu">
+  <a href="/chat" class="item">
+  <i class="talk outline icon"></i>
+    Chat
+  </a>
+  <a  href="/logs" class="item active">
+  <i class="archive icon"></i>
+    Log
+  </a>
+  
+</div>
+
+ <div class="ui container content">
+  @Section['Content']
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.js" integrity="sha256-flVaeawsBV96vCHiLmXn03IRJym7+ZfcLVvUWONCas8=" crossorigin="anonymous"></script>
+</body>
+</html>

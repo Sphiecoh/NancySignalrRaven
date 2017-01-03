@@ -9,7 +9,7 @@ namespace NancySignalrRaven
     {
         public ChatModule(IDocumentStore documentStore)
         {
-            Get("/",  ctx => View["Index"]);
+            Get("/",  ctx => View["chat"]);
             Get("/chat", ctx => View["chat"]);
             Get("/logs",ctx =>
             {
@@ -23,6 +23,15 @@ namespace NancySignalrRaven
                 }
                 return View["ChatLog", model];
             });
+            Get("/remove/{id}", (ctx) => {
+
+                 using (IDocumentSession session = documentStore.OpenSession())
+                {
+                    session.Delete("ChatLogDocuments/" + ctx.Id);
+                    session.SaveChanges();
+                }
+                return Response.AsRedirect("/logs");
+            } );
         }
     }
 }
